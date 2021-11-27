@@ -1,0 +1,33 @@
+{{range where .Pages ".Type" "team"}}
+
+<div class="row row-cols-lg-2" style="justify-content:center; margin: 5% 5%;">
+    <div class="col-12 col-xl-5 ">
+        <div id="team" style="padding-top:70px;">
+            <h2>{{.Title}}</h2>
+            <p class="lead">{{.Summary}}</p>
+        </div>
+    </div>
+
+    <div class="col-12 col-xl-7">
+        <div class="row">
+            {{range .Params.images }}
+            <div class="col-12 col-md-6 col-xl-4 my-2 p-0 mx-auto team_member_div">
+                <div class="cards mx-auto">
+                    <div class="imageBox">
+                        <div class="overlay"></div>
+                        <img src="{{.image}}">
+                    </div>
+                    <div class="content">
+                        <div class="details">
+                            <h3> {{.name}} <br> <span> {{.function}}</span></h3>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            {{end}}
+        </div>
+    </div>
+</div>
+
+
+{{end}}

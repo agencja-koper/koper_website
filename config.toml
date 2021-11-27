@@ -1,0 +1,26 @@
+baseURL = "http://agencjakoper.com"
+languageCode = "pl-pl"
+title = "Koper"
+
+[menu]
+  [[menu.main]]
+    name = "O nas"
+    url = "#about"
+    weight = 1
+  [[menu.main]]
+    name = "Nasze działania"
+    url = "#actions"
+    weight = 2
+  [[menu.main]]
+    name = "Nasz zespół"
+    url = "#team"
+    weight = 3
+ [[menu.main]]
+    name = "Oferta"
+    url = "#offer"
+    weight = 4
+ [[menu.main]]
+    name = "Kontakt"
+    url = "#contact"
+    weight = 5
+

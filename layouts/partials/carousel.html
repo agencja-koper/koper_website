@@ -1,0 +1,43 @@
+<div id="mainCarousel"  class="d-none d-md-inline-block carousel slide" data-bs-ride="carousel" data-interval="20000" style="margin-top: 50px;">
+
+    <div class="carousel-inner">
+
+        {{range where .Pages ".Type" "carousel"}}
+        {{ $allPosts := .Params.images }}
+        {{ $subtitle := .Params.subtitle }}
+        {{ $firstPost := index (first 1 $allPosts) 0 }}
+
+        {{$class := "carousel-item"}}
+
+        {{ range $allPosts }}
+        {{ if eq $firstPost.image .image }}
+        {{$class = "carousel-item active"}}
+        {{else}}
+        {{$class = "carousel-item"}}
+
+        {{ end }}
+
+        <div class="{{$class}}" >
+            <div class="carousel_overlay"></div>
+            <img class ="background_image"src="{{ .image }}" alt="">
+
+            <div class="carousel_div">
+                <div class="carousel-caption mx-auto" style="height:100%;">
+                    <div class="col-12 mx-auto" style="margin-top:70px;">
+                        <img class="carousel-logo" src="images/logo.svg">
+                    </div>
+                    <h5> dowiedz się wiecej </h5>
+                    <a style="cursor:pointer; font-size:2em; margin-top:-10px;"
+                       class="btn btn-lg text-white" href="#offer"><i class="fas fa-chevron-circle-down"></i></a>
+                    </div>
+            </div>
+
+        </div>
+
+        {{ end }}
+        {{ end }}
+
+    </div>
+</div>
+
+

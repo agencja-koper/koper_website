@@ -1,0 +1,25 @@
+<div id="offer" style="margin: 5% 5%; padding-top: 70px; justify-content: center;">
+
+    <h2>Nasza oferta</h2>
+
+    <div class="row">
+        {{ range sort (where .Site.Pages ".Type" "offer") ".Params.cardinality" "asc"}}
+
+        <div class="col-12  col-lg-8 col-xl-4 offer-card mx-auto" style="justify-content: center;">
+            <button class="btn" style="margin: auto; min-width: 100%;" value="{{.Params.image}}">
+                <div class="card-header p-5 {{.Params.color}}">
+                    <h3 class="font-weight-light mb-2">{{.Title}}</h3>
+                </div>
+            </button>
+        </div>
+        {{end}}
+    </div>
+</div>
+
+
+</div>
+
+<div id="image-viewer">
+    <span class="close">&times;</span>
+    <img class="modal-content" id="full-image">
+</div>

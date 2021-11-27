@@ -1,0 +1,19 @@
+<div style="margin: 10% 8% 0 8%;">
+    {{range where .Pages ".Type" "section"}}
+    <div class="row" style="justify-content:center;">
+        <div class="col-md-12 col-xl-5 mb-5">
+            <img src="{{.Params.image}}" style="max-width:100%; display: block;margin-left: auto; margin-right: auto;">
+        </div>
+        <div class="col-md-12 col-xl-6 mx-5">
+            <h2 class="featurette-heading">{{ .Title }}</h2>
+            <ol>
+                {{range .Params.paragraphs}}
+                <li>
+                    <p class="lead justify-p" style="white-space: pre-line;">{{.}}</p>
+                </li>
+                {{end}}
+            </ol>
+        </div>
+    </div>
+    {{end}}
+</div>

@@ -1,0 +1,36 @@
+<div id="actions" style="padding-top:70px;">
+    <h2>Nasze działania</h2>
+    <div class="row mx-auto">
+
+        {{range sort (where .Site.Pages ".Type" "action") ".Params.cardinality" "asc"}}
+        {{ $color := .Params.color}}
+        {{$ifSolid := "solidTextBox"}}
+        {{$ifLight := ""}}
+
+        {{if .Params.background_image}}
+        {{ $ifSolid = "textBox"}}
+        {{end}}
+
+        {{if or (eq .Params.color "dark") (eq .Params.color "dark-green") }}
+        {{ $ifLight = "light-font"}}
+        {{end}}
+
+        <div class="col-12 col-xl-4 mx-auto" style="max-width:500px;">
+            <div class="postBox mt-2">
+                {{if .Params.background_image}}
+                <div class="imageBox">
+                    <img src="{{.Params.background_image}}" class="cover">
+                </div>
+                {{end}}
+
+                <div class="{{$ifSolid}} {{$ifLight}} {{$color}}">
+                    <h3>{{.Title}}</h3>
+                    <p class="text-justify">{{ .Summary }}</p>
+                </div>
+            </div>
+        </div>
+        {{end}}
+    </div>
+</div>
+
+
