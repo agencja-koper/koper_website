@@ -5,7 +5,7 @@ type: team
 images:
 - image: images/team/kuba.jpg
   name: Jakub Borkowski
-  function: CEO
+  function: Pomysłodawca i analityk
 - image: images/team/paulina.jpg
   name: Phuong Thao Dang
   function: Koordynator

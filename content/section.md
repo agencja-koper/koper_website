@@ -1,5 +1,5 @@
 ---
-title: Dlaczego koper?
+title: Dlaczego Koper?
 type: section
 image: images/section.jpg
 paragraphs:
