@@ -7,10 +7,10 @@ images:
   name: Jakub Borkowski
   function: Pomysłodawca i analityk
 - image: images/team/paulina.jpg
-  name: Phuong Thao Dang
+  name: Oliwia Cieślak
   function: Koordynator
 - image: images/team/tina.jpg 
-  name: Tina Ha
+  name: Thuy Tien Ha
   function: Grafik
 - image: images/team/basia.jpg
   name: Barbara Głowacka
