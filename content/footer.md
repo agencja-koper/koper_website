@@ -3,7 +3,6 @@ title:
 subtitle: Chcesz nawiązać z nami współpracę?
 type: footer
 email: koperagencja@gmail.com
-tel: +48 575 650 750
 fb: https://www.facebook.com/Agencja-Koper-111403721371079
 ig: https://www.instagram.com/koper_agencja/
 in: https://www.linkedin.com/company/koperagencja/?viewAsMember=true
